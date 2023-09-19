@@ -5,7 +5,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 
 public class DequeCity  implements Iterable<Cidade>{
-    private static PrintStream StdOut;
     private int n;
     private No Sentinela;
     public DequeCity(){
@@ -209,7 +208,7 @@ public class DequeCity  implements Iterable<Cidade>{
 
     public Iterable<String> keys() {
 
-        LinkedList<String> queue = new LinkedList<String>();
+        Deque<String> queue = new LinkedList<String>();
 
         for (No x = Sentinela.prox; x != Sentinela; x = x.prox)
             queue.add( x.chave);
@@ -230,7 +229,7 @@ public class DequeCity  implements Iterable<Cidade>{
 
             int temperature = 0;
 
-            StdOut.println(" Total = " + total);
+            System.out.println(" Total = " + total);
 
             DequeCity st = new DequeCity();
 
@@ -246,12 +245,12 @@ public class DequeCity  implements Iterable<Cidade>{
             br.close();
             inl.close();
 
-            StdOut.println("-----Testando--- Procure afterword");
-            StdOut.println(st.get("afternvord"));
-            StdOut.println("-----Testando--- Procure Feeney");
-            StdOut.println(st.get("Feeney"));
-            StdOut.println("-----Testando--- Procure Fee");
-            StdOut.println(st.get("Fee"));
+            System.out.println("-----Testando--- Procure afterword");
+            System.out.println(st.get("afternvord"));
+            System.out.println("-----Testando--- Procure Feeney");
+            System.out.println(st.get("Feeney"));
+            System.out.println("-----Testando--- Procure Fee");
+            System.out.println(st.get("Fee"));
 
             inl = new FileReader(args[1]);
             br = new BufferedReader(inl);
