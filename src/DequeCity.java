@@ -208,10 +208,10 @@ public class DequeCity  implements Iterable<Cidade>{
 
     public Iterable<String> keys() {
 
-        Deque<String> queue = new LinkedList<String>();
+        DequeString queue = new DequeString();
 
         for (No x = Sentinela.prox; x != Sentinela; x = x.prox)
-            queue.add( x.chave);
+            queue.push_back(x.chave);
         return queue;
 
     }
@@ -264,7 +264,7 @@ public class DequeCity  implements Iterable<Cidade>{
 
                 if (myCity == null) System.out.print("An[Failed] " + tmp + " não foi encontrada.");
                 else {
-                    System.out.print("Nn[Ok] " + myCity.get_nome() + " foi encontrada. Temperatura lá é: " + myCity.get_temp() + "F");
+                    System.out.println("\n[Ok] " + myCity.get_nome() + " foi encontrada. Temperatura lá é: " + myCity.get_temp() + "F");
                 }
             }
             br.close();

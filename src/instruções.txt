@@ -1,0 +1,8 @@
+Para Compilar:
+    javac Cidade.java
+    javac DequeString.java
+    javac DequeCity.java
+
+Execução:
+    java DequeCity Entrada2.in Procurar.txt
+
